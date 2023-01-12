@@ -3,6 +3,7 @@ package com.example.androidallcomponentsample
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androidallcomponentsample.databinding.ActivityMainBinding
+import com.example.androidallcomponentsample.reddit.repository.RedditPostRepository
 import com.example.androidallcomponentsample.reddit.repository.inDb.DbRedditPostRepository
 import com.example.androidallcomponentsample.reddit.ui.RedditActivity
 
@@ -21,16 +22,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.networkOnly.setOnClickListener{
-            show(RedditPostRepository.Type_IN_MEMORY_BY_ITEM)
+            show(RedditPostRepository.Type.IN_MEMORY_BY_ITEM)
         }
 
         binding.networkOnlyWithPageKeys.setOnClickListener{
-            show(RedditPostRepository.Type_IN_MEMORY_BY_PAGE)
+            show(RedditPostRepository.Type.IN_MEMORY_BY_PAGE)
         }
 
     }
 
-    private fun show(type : DbRedditPostRepository.Type){
+    private fun show(type : RedditPostRepository.Type){
         val Intent = RedditActivity.intentFor(this,type)
         startActivity(intent)
     }

@@ -6,13 +6,11 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.androidallcomponentsample.reddit.vo.RedditPost
 import com.example.androidallcomponentsample.reddit.vo.SubredditRemoteKey
-
 @Database(
     entities = [RedditPost::class, SubredditRemoteKey::class],
     version = 1,
     exportSchema = false
 )
-
 abstract class RedditDb : RoomDatabase() {
     companion object {
         fun create(context: Context, useInMemory: Boolean): RedditDb {
@@ -24,10 +22,9 @@ abstract class RedditDb : RoomDatabase() {
             return databaseBuilder
                 .fallbackToDestructiveMigration()
                 .build()
-
         }
     }
-        abstract fun post(): RedditPostDao
 
-        abstract fun remoteKey() : SubredditRemoteKeyDao
-    }
+    abstract fun posts(): RedditPostDao
+    abstract fun remoteKeys(): SubredditRemoteKeyDao
+}
