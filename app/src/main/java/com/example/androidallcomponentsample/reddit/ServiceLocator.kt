@@ -5,7 +5,7 @@ import android.content.Context
 import androidx.annotation.VisibleForTesting
 
 interface ServiceLocator {
-    companion object{
+   /* companion object{
         private val LOCK = Any()
         private var instance : ServiceLocator? = null
 
@@ -67,5 +67,5 @@ interface ServiceLocator {
 
 
     }
-
+*/
 }

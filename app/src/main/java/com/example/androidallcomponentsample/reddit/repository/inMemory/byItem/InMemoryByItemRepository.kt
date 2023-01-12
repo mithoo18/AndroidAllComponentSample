@@ -1,4 +1,17 @@
 package com.example.androidallcomponentsample.reddit.repository.inMemory.byItem
 
-class InMemoryByItemRepository {
+import com.example.androidallcomponentsample.reddit.api.RedditApi
+
+class InMemoryByItemRepository(private val redditApi: RedditApi) : RedditPostRepository {
+    override fun postsOfSubreddit(subReddit: String, pageSize: Int) = Pager(
+        PagingConfig(
+            pageSize = pageSize,
+            enablePlaceholders = false
+        )
+    ) {
+        ItemKeyedSubredditPagingSource(
+            redditApi = redditApi,
+            subredditName = subReddit
+        )
+    }.flow
 }
