@@ -1,40 +1,20 @@
 package com.example.androidallcomponentsample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity(),MainView {
-
-    private val presenter by inject<MainPresenter>()
+class MainActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        presenter.attachView(this)
 
-        findViewById<Button>(R.id.hello_button).setOnClickListener {
-            presenter().showMessage()
-        }
-
+        var intent = Intent(this@MainActivity,MyIntentService::class.java)
+        intent.putExtra("data", "This text is sent via intent to Intent Service");
+        startService(intent)
     }
-
-    override fun showError(error : String) {
-
-    }
-
-    override fun showMessage(heelo : String){
-        findViewById<TextView>(R.id.textView).visibility = View.VISIBLE
-        findViewById<TextView>(R.id.textView).text = "hello"
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.detachView()
-    }
-
-
-
 }
