@@ -43,5 +43,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     implementation "org.koin:koin-core:0.8.2"
     implementation "org.koin:koin-android:0.8.2"
-
+    implementation 'com.github.requery:sqlite-android:3.39.2'
 }
