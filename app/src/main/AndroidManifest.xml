@@ -16,7 +16,7 @@
         android:theme="@style/Theme.AndroidAllComponentSample"
         tools:targetApi="31">
         <activity
-            android:name=".ListActivity"
+            android:name=".MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
