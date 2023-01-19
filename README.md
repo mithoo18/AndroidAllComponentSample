@@ -16,6 +16,13 @@ $ git remote remove origin
 ---
 
 
+### How it looks 
+<table>
+<tr>
+  <td><img align="left" src="https://github.com/mithoo18/zoom_clone/blob/master/gitImg/1.jpg" alt="Home Screen" /></td>
+</tr>
+</table>
+
 ### About Application
 
 - Technology Used :- Java,Kotlin
