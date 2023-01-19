@@ -1,4 +1,4 @@
-### Game_2048 Application
+### AndroidAllComponentSample  Application
 
 ### Getting Started 🚀
 
