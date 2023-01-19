@@ -19,7 +19,7 @@ $ git remote remove origin
 ### How it looks 
 <table>
 <tr>
-  <td><img align="left" src="https://github.com/mithoo18/zoom_clone/blob/master/gitImg/1.jpg" alt="Home Screen" /></td>
+  <td><img align="left" src="https://github.com/mithoo18/AndroidAllComponentSample/blob/master/app/src/main/res/gitimg/Capture.PNG" alt="Home Screen" /></td>
 </tr>
 </table>
 
