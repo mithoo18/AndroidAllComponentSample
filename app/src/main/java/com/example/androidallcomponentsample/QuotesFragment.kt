@@ -12,7 +12,7 @@ import android.widget.Toast
 class QuotesFragment : Fragment() {
 
     companion object{
-        private const val TAG = "QuotesFragment"
+        private const val TAG = "QuotesFragments"
         private lateinit var mQuoteArray : Array<String>
     }
 
